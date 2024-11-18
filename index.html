@@ -1,191 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Séries Favoritas</title>
+    <title>Loja de Ursos Fofos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Séries Populares</h1>
-        <p>Confira algumas das séries mais populares e marque se já assistiu!</p>
+    <header class="header">
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjLXyeCtU5BclHRRl4W8Vigqco33Pjls59zA&s" alt="Logo da Loja">
+        </div>
+        <h1>Mundo dos ursos</h1>
     </header>
 
-    <main>
-        <section class="series-list">
-            <!-- Série 1: Grey's Anatomy -->
-            <div class="serie">
-                <h2>Grey's Anatomy</h2>
-                <img src="https://via.placeholder.com/150" alt="Grey's Anatomy">
-                <p class="sinopse">
-                    Grey's Anatomy segue a vida de médicos e pacientes em Seattle. A série explora tanto os aspectos profissionais quanto pessoais dos médicos, com ênfase nas suas relações e desafios pessoais.
-                </p>
-                <p class="rating">
-                    Avaliação do público: <span class="stars">⭐⭐⭐⭐⭐</span>
-                </p>
-                <div class="watch-status">
-                    <label>
-                        <input type="checkbox" class="watched-checkbox"> Já assisti
-                    </label>
-                </div>
+    <section class="about">
+        <h2>Sobre Nós</h2>
+        <p>Uma loja dedicada aos ursos de pelúcia da Disney oferece uma experiência mágica e encantadora para os fãs da marca, especialmente para aqueles que adoram a ideia de ter personagens icônicos em formato de pelúcia. Essa loja pode ser tanto física quanto online, com foco em criar um espaço acolhedor onde as pessoas possam adquirir pelúcias de alta qualidade, representando os amados personagens da Disney.</p>
+    </section>
+
+    <section class="products">
+        <div class="product" id="urso1">
+            <img src="https://acdn.mitiendanube.com/stores/001/861/700/products/24ced2c1-d018-4061-8232-da304216eca61-18878bd1175cbf2f7616799180215227-480-0.webp" alt="Urso de Pelúcia 1">
+            <h3>Pelucia Marie</h3>
+            <p>R$ 79,90</p>
+            <button onclick="addToCart('Pelucia Marie')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" id="urso2">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_828671-MLU73356178889_122023-O.webp" alt="Urso de Pelúcia 2">
+            <h3>Pelucia Ratatulle</h3>
+            <p>R$ 89,90</p>
+            <button onclick="addToCart('Pelucia Ratatulle')">Adicionar ao Carrinho</button>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="product" id="urso3">
+            <img src="https://m.media-amazon.com/images/I/616s1zCyYsL._AC_SX679_.jpg" alt="Urso de Pelúcia 3">
+            <h3>Pelucia Sullivan</h3>
+            <p>R$ 99,90</p>
+            <button onclick="addToCart('Pelucia Sullivan')">Adicionar ao Carrinho</button>
+        </div>
+
+        <section class="products">
+
+            <div class="product" id="urso4">
+                <img src="https://glovestore.com.br/cdn/shop/files/Sb8e5503894284bcaae37fdaa2a847dceW.webp?v=1730429827&width=1445" alt="Urso de Pelúcia 4">
+                <h3>Pelucia Stitch</h3>
+                <p>R$ 89,90</p>
+                <button onclick="addToCart('Pelucia Sullivan')">Adicionar ao Carrinho</button>
             </div>
 
-            <!-- Série 2: Brooklyn 99 -->
-            <div class="serie">
-                <h2>Brooklyn Nine-Nine</h2>
-                <img src="https://via.placeholder.com/150" alt="Brooklyn 99">
-                <p class="sinopse">
-                    Brooklyn Nine-Nine é uma série de comédia policial que segue as desventuras do detetive Jake Peralta e seus colegas na 99ª delegacia de polícia de Brooklyn.
-                </p>
-                <p class="rating">
-                    Avaliação do público: <span class="stars">⭐⭐⭐⭐</span>
-                </p>
-                <div class="watch-status">
-                    <label>
-                        <input type="checkbox" class="watched-checkbox"> Já assisti
-                    </label>
-                </div>
-            </div>
-
-            <!-- Série 3: The Vampire Diaries -->
-            <div class="serie">
-                <h2>The Vampire Diaries</h2>
-                <img src="https://via.placeholder.com/150" alt="The Vampire Diaries">
-                <p class="sinopse">
-                    The Vampire Diaries acompanha os irmãos vampiros Stefan e Damon Salvatore enquanto eles se envolvem em um triângulo amoroso com Elena Gilbert em uma cidade cheia de mistérios sobrenaturais.
-                </p>
-                <p class="rating">
-                    Avaliação do público: <span class="stars">⭐⭐⭐⭐⭐</span>
-                </p>
-                <div class="watch-status">
-                    <label>
-                        <input type="checkbox" class="watched-checkbox"> Já assisti
-                    </label>
-                </div>
-            </div>
-
-            <!-- Série 4: Once Upon a Time -->
-            <div class="serie">
-                <h2>Once Upon a Time</h2>
-                <img src="https://via.placeholder.com/150" alt="Once Upon a Time">
-                <p class="sinopse">
-                    Once Upon a Time mistura elementos de contos de fadas com a vida real, explorando o destino de personagens que vivem em Storybrooke, uma cidade onde os contos de fadas ganham vida.
-                </p>
-                <p class="rating">
-                    Avaliação do público: <span class="stars">⭐⭐⭐⭐</span>
-                </p>
-                <div class="watch-status">
-                    <label>
-                        <input type="checkbox" class="watched-checkbox"> Já assisti
-                    </label>
-                </div>
-            </div>
-
-            <!-- Série 5: The Walking Dead -->
-            <div class="serie">
-                <h2>The Walking Dead</h2>
-                <img src="https://via.placeholder.com/150" alt="The Walking Dead">
-                <p class="sinopse">
-                    The Walking Dead segue um grupo de sobreviventes que tenta reconstruir a civilização após um apocalipse zumbi. A série explora os aspectos psicológicos e emocionais da luta pela sobrevivência.
-                </p>
-                <p class="rating">
-                    Avaliação do público: <span class="stars">⭐⭐⭐⭐⭐</span>
-                </p>
-                <div class="watch-status">
-                    <label>
-                        <input type="checkbox" class="watched-checkbox"> Já assisti
-                    </label>
-                </div>
-            </div>
-
-            <!-- Série 6: Bridgerton -->
-            <div class="serie">
-                <h2>Bridgerton</h2>
-                <img src="https://via.placeholder.com/150" alt="Bridgerton">
-                <p class="sinopse">
-                    Bridgerton é uma série dramática baseada nos romances de Julia Quinn, que segue a alta sociedade londrina durante a Regência, cheia de escândalos, paixões e rivalidades.
-                </p>
-                <p class="rating">
-                    Avaliação do público: <span class="stars">⭐⭐⭐⭐⭐</span>
-                </p>
-                <div class="watch-status">
-                    <label>
-                        <input type="checkbox" class="watched-checkbox"> Já assisti
-                    </label>
-                </div>
-            </div>
-
-            <!-- Série 7: Stranger Things -->
-            <div class="serie">
-                <h2>Stranger Things</h2>
-                <img src="https://via.placeholder.com/150" alt="Stranger Things">
-                <p class="sinopse">
-                    Stranger Things se passa nos anos 80 e segue um grupo de amigos enquanto eles enfrentam fenômenos sobrenaturais e monstros, enquanto tentam desvendar os mistérios de Hawkins, Indiana.
-                </p>
-                <p class="rating">
-                    Avaliação do público: <span class="stars">⭐⭐⭐⭐⭐</span>
-                </p>
-                <div class="watch-status">
-                    <label>
-                        <input type="checkbox" class="watched-checkbox"> Já assisti
-                    </label>
-                </div>
-            </div>
-
-            <!-- Série 8: Gossip Girl -->
-            <div class="serie">
-                <h2>Gossip Girl</h2>
-                <img src="https://via.placeholder.com/150" alt="Gossip Girl">
-                <p class="sinopse">
-                    Gossip Girl acompanha a vida de um grupo de jovens ricos e privilegiados de Nova York enquanto lidam com suas relações e os segredos revelados por um blogueiro anônimo.
-                </p>
-                <p class="rating">
-                    Avaliação do público: <span class="stars">⭐⭐⭐⭐</span>
-                </p>
-                <div class="watch-status">
-                    <label>
-                        <input type="checkbox" class="watched-checkbox"> Já assisti
-                    </label>
-                </div>
-            </div>
-
-            <!-- Série 9: Gilmore Girls -->
-            <div class="serie">
-                <h2>Gilmore Girls</h2>
-                <img src="https://via.placeholder.com/150" alt="Gilmore Girls">
-                <p class="sinopse">
-                    Gilmore Girls segue a vida de mãe e filha, Lorelai e Rory Gilmore, enquanto elas navegam pelos desafios de crescer, amor e amizades em uma pequena cidade chamada Stars Hollow.
-                </p>
-                <p class="rating">
-                    Avaliação do público: <span class="stars">⭐⭐⭐⭐</span>
-                </p>
-                <div class="watch-status">
-                    <label>
-                        <input type="checkbox" class="watched-checkbox"> Já assisti
-                    </label>
-                </div>
-            </div>
-
-            <!-- Série 10: You -->
-            <div class="serie">
-                <h2>You</h2>
-                <img src="https://via.placeholder.com/150" alt="You">
-                <p class="sinopse">
-                    You segue Joe Goldberg, um gerente de livraria que se torna obcecado pelas mulheres que ele ama, fazendo tudo para conquistar e controlar suas vidas de maneiras perturbadoras.
-                </p>
-                <p class="rating">
-                    Avaliação do público: <span class="stars">⭐⭐⭐⭐⭐</span>
-                </p>
-                <div class="watch-status">
-                    <label>
-                        <input type="checkbox" class="watched-checkbox"> Já assisti
-                    </label>
-                </div>
-            </div>
-        </section>
-    </main>
-
+    <section class="contact">
+        <h2>Contato</h2>
+        <p>Endereço: Rua dos Ursos, 123 - Cidade Rosa</p>
+        <p>Email: contato@mundodosursos.com</p>
+     2024 undo dos ursos. Todos os direitos reservados.</p>
+    </footer>
+    
     <script src="main.js"></script>
 </body>
 </html>
