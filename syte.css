@@ -1,11 +1,10 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -13,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* Cabeçalho */
+
 header {
     background-color: #4a90e2;
     color: white;
@@ -30,7 +29,7 @@ header p {
     font-size: 1.2rem;
 }
 
-/* Lista de Séries */
+
 .series-list {
     display: flex;
     flex-wrap: wrap;
@@ -39,14 +38,19 @@ header p {
     margin-top: 20px;
 }
 
-/* Caixa de cada série */
+
 .serie {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 280px;
+    width: 280px; 
     padding: 15px;
     text-align: center;
+    transition: transform 0.3s ease; 
+}
+
+.serie:hover {
+    transform: scale(1.05); 
 }
 
 .serie h2 {
@@ -79,7 +83,7 @@ header p {
     margin-top: 10px;
 }
 
-/* Checkbox estilizado */
+
 .watch-status label {
     font-size: 1rem;
     display: flex;
@@ -90,4 +94,29 @@ header p {
     margin-right: 10px;
     width: 20px;
     height: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .serie {
+        width: 100%; 
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .serie {
+        width: 45%; 
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .serie {
+        width: 280px; 
+    }
+}
+
+.products{
+    justify-content:center;
 }
